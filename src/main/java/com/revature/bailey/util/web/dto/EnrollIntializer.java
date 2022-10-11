@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChallengesInitializer {
-    private String chaid;
-    private String chname;
+public class EnrollIntializer {
+    private String enrollid;
+    private String cname;
+    private String enroll;
     private long id;
 }

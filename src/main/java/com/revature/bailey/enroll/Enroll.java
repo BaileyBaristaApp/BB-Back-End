@@ -1,24 +1,23 @@
-package com.revature.bailey.courses;
+package com.revature.bailey.enroll;
 
-import com.revature.bailey.classes.Classes;
+import com.revature.bailey.users.Users;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 
-@Table(name = "courses")
-public class Courses {
+@Entity
+@Table(name = "enroll")
+public class Enroll {
     @Id
-    private String courseid;
-    @Column(unique = true)
-    private String coname;
+    private String enrollid;
+    private String cname;
+    private String enroll;
     @ManyToOne
     @JoinColumn(name = "id", referencedColumnName = "id")
-    private Classes id;
+    private Users id;
 }
